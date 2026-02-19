@@ -45,6 +45,7 @@ export enum Verifications {
   Emeritus = 'Emeritus',
   Editor = 'Editor',
   Administrator = 'Administrator',
+  Banned = 'Banned',
   /** 仅存在于翻译文件中的身份 */
   Teacher = 'Teacher',
 }
@@ -217,6 +218,7 @@ export interface User {
   Verification: Verification;
 }
 export interface Summary {
+  $type: string;
   ID: ID;
   Tags: SummaryTag[];
   Type: int32;
