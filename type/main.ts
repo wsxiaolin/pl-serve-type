@@ -218,7 +218,6 @@ export interface User {
   Verification: Verification;
 }
 export interface Summary {
-  $type: string;
   ID: ID;
   Tags: SummaryTag[];
   Type: int32;
@@ -694,3 +693,4 @@ export interface Messages {
   GetMessage(q: Param<{ MessageID: ID }>): Promise<Result<RelationList>>
   GetMessages(q: Param<{ CategoryID: int32; NoTemplates: boolean; Skip: int32; Take: int32; }>): Promise<Result<{ Messages: Message[]; Templates: unknown; }>>
 }
+
